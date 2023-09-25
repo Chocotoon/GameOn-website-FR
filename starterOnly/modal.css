@@ -527,3 +527,12 @@ footer {
   }
 }
 
+#confirmation {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 40%;
+  left: 30%;
+  color: red;
+  font-size: 30px;
+}
