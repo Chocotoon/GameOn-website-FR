@@ -35,7 +35,8 @@ document.querySelector("form").addEventListener("submit", function (event) {
 // Fonctions de validation du formulaire
 function validatePrenom() {
   const prenom = document.getElementById("prenom");
-  if (prenom.value.length < 2) {
+  trimmedPrenom = prenom.value.trim();
+  if (trimmedPrenom.length < 2) {
     prenom.parentElement.setAttribute("data-error", "Vous devez remplir ce champ et il doit contenir au moins 2 caractères.");
     prenom.parentElement.setAttribute("data-error-visible", "true");
     return false;
@@ -50,7 +51,8 @@ function validatePrenom() {
 
 function validateNom() {
   const nom = document.getElementById("nom");
-  if (nom.value.length < 2) {
+  trimmedNom = nom.value.trim();
+  if (trimmedNom.length < 2) {
     nom.parentElement.setAttribute("data-error", "Vous devez remplir ce champ et il doit contenir au moins 2 caractères.");
     nom.parentElement.setAttribute("data-error-visible", "true");
     return false;
@@ -94,7 +96,8 @@ function validateMail() {
 
 function validateNbetournois() {
   const nbeTournois = document.getElementById("nbe_tournois");
-  if (isNaN(nbeTournois.value) || nbeTournois.value == "") {
+  trimmedNbetournois = nbeTournois.value.trim();
+  if (isNaN(trimmedNbetournois) || trimmedNbetournois == "") {
     nbeTournois.parentElement.setAttribute("data-error", "Veuillez indiquer une quantité valide.");
     nbeTournois.parentElement.setAttribute("data-error-visible", "true");
     return false;
