@@ -126,16 +126,22 @@ function validateRadiobuttons() {
 
 
 function validate() {
-  validatePrenom();
-  validateNom();
-  validateMail();
-  validateCheckbox();
-  validateNbetournois();
-  validateRadiobuttons();
-  if (!validatePrenom() || !validateNom() || !validateMail() || !validateCheckbox() || !validateNbetournois() || !validateRadiobuttons()) {
+  let validate1 = validatePrenom();
+  let validate2 = validateNom();
+  let validate3 = validateMail();
+  let validate4 = validateCheckbox();
+  let validate5 = validateNbetournois();
+  let validate6 = validateRadiobuttons();
+  if (!validate1 || 
+      !validate2 ||
+      !validate3 ||
+      !validate4 ||
+      !validate5 ||
+      !validate6) {
 
   }
   else {
+    document.querySelector('form').reset();
     modalContent.innerHTML = "";
     modalContent.innerHTML = "<p>Merci pour </br>votre inscription</p>";
     modalContent.style.height = "600px";
